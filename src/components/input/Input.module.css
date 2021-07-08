@@ -1,0 +1,13 @@
+.input {
+  width: 200px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+.form {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
