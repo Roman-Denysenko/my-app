@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 
 import s from './News.module.css';
 import { searchNewsValue } from '../../redux/news/selector';
+import Input from '../input';
+import { fetchNews } from '../../redux/news/newsAction';
 
 const API_KEY = '212fe16f93d74cf489b7594d6a016e82';
 const baseURL = `https://newsapi.org/v2/everything`;
@@ -38,9 +40,12 @@ const News = () => {
   };
 
   return (
-    <div className={s.container}>
-      <ul>{news.map(NewsItem)}</ul>
-    </div>
+    <>
+      <Input onActionSubmit={fetchNews} />
+      <div className={s.container}>
+        <ul>{news.map(NewsItem)}</ul>
+      </div>
+    </>
   );
 };
 

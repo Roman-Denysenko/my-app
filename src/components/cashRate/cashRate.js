@@ -20,7 +20,7 @@ const CashRate = () => {
     }
     fetchApiPB();
   }, []);
-  console.log(cash);
+  
   return (
     <div>
       <ul className={s.list}>

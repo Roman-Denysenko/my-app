@@ -1,11 +1,12 @@
 import React from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import s from './Main.module.css';
 import Header from '../../components/header';
 import Aside from '../../components/aside';
 import News from '../../components/news';
-import Input from '../../components/input';
-import { fetchNews } from '../../redux/news/newsAction';
+import Films from '../../components/films';
+import Home from '../../components/home';
 
 const Main = () => {
   return (
@@ -14,8 +15,12 @@ const Main = () => {
       <div className={s.container}>
         <Aside />
         <div>
-          <Input className={s.form} onActionSubmit={fetchNews} />
-          <News />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/news" component={News} />
+            <Route path="/films" component={Films} />
+            <Redirect to="/" />
+          </Switch>
         </div>
       </div>
     </>
