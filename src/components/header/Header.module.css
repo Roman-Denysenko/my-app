@@ -3,6 +3,8 @@
   padding: 10px 30px;
 }
 
-a {
+.link {
   margin-right: auto;
+  margin-left: 15px;
+  text-decoration: none;
 }

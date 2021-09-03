@@ -6,9 +6,15 @@ const Header = () => {
   return (
     <header className={s.header}>
       <nav>
-        <Link to="/">home</Link>
-        <Link to="/news">news</Link>
-        <Link to="/films">films</Link>
+        <Link to="/" className={s.link}>
+          home
+        </Link>
+        <Link to="/news" className={s.link}>
+          news
+        </Link>
+        <Link to="/films" className={s.link}>
+          films
+        </Link>
       </nav>
     </header>
   );
