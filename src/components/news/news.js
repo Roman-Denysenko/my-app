@@ -40,12 +40,12 @@ const News = () => {
   };
 
   return (
-    <>
+    <div>
       <Input onActionSubmit={fetchNews} />
       <div className={s.container}>
         <ul>{news.map(NewsItem)}</ul>
       </div>
-    </>
+    </div>
   );
 };
 

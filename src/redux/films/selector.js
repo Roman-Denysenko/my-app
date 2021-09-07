@@ -1,1 +1,1 @@
-// export const searchFilmsValue = state => state.FilmsValueSearch.payload;
+export const searchFilmsValue = state => state.filmsValueSearch.payload;
